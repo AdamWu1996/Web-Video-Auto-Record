@@ -14,7 +14,8 @@ from python3_anticaptcha import ImageToTextTask
 option = webdriver.ChromeOptions()
 option.add_experimental_option('useAutomationExtension', False)
 driver = webdriver.Chrome(chrome_options=option)
-    
+
+# 獲取課程時間
 def getDuartions():
     url = "https://cek.ott2b.hinet.net/learning/dist/#/home"
     driver.get(url)
@@ -32,7 +33,7 @@ def getDuartions():
     input('等待展開課程')
     duartions = driver.find_elements_by_class_name("duration")
     return duartions
-
+# 將課程時間轉換成 INT LIST
 def duartionTransfer(duartions):
     def textToNum(text):
         for idx,i in enumerate(text):
