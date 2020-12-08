@@ -26,9 +26,9 @@ def getDuartions():
     
     driver.implicitly_wait(1)
     account = driver.find_element_by_id('input-93')
-    account.send_keys('P223502682')
+    account.send_keys('YOUR_ACCOUNT')
     pwd = driver.find_element_by_id('input-97')
-    pwd.send_keys('cross910188')
+    pwd.send_keys('YOUR_PASSWORD')
     input('等待展開課程')
     duartions = driver.find_elements_by_class_name("duration")
     return duartions
